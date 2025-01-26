@@ -1,0 +1,71 @@
+/* Ini File CSS */
+main{
+    display: flex;
+    gap: 32px;
+    padding: 32px;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.custom-h1 {
+    color: #e74c3c;
+    font-size: 42px;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(45deg, #f39c12, #e74c3c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    border-bottom: 3px solid #e74c3c;
+  }
+
+input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 4px;
+    border-radius: 80px;
+}
+
+form {
+    background-color: rgb(196, 232, 193);
+    padding: 32px;
+    border-radius: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 16px;
+    border: 4px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+button {
+    border: none;
+    padding: 8px;
+    color: antiquewhite;
+}
+
+.bg-black {
+    background-color: black;
+    transition-delay: .3s;
+}
+
+.bg-cadet-blue {
+    background-color: cadetblue;
+}
+
+.result-section {
+   
+    text-align: center;
+    background-color:rgb(196, 232, 193);
+}
+
+#result-bmi {
+    font-size: xxx-large;
+    font-family: math;
+}
