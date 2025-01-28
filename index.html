@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -24,13 +25,23 @@
             <!-- Form -->
             <form>
                 <div class="form-group">
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <div>
+                            <img src="asset/male.png" alt="Pria" id="male" class="male-img">
+                            <input type="radio" id="gender-male" name="gender" value="male" checked>
+                            <label for="gender-male">Pria</label>
+                        </div>
+                        <div>
+                            <img src="asset/female.png" alt="Wanita" id="female" class="female-img">
+                            <input type="radio" id="gender-female" name="gender" value="female">
+                            <label for="gender-female">Wanita</label>
+                        </div>
+                    </div>
+                 </div>
+                <div class="form-group">
                     <label for="input-berat-badan">Berat Badan (kg)</label>
                     <input type="number" id="input-berat-badan">
-                </div>
-
-                <div class="form-group">
-                    <label for="input-usia">Usia (tahun)</label>
-                    <input type="number" id="input-usia">
                 </div>
 
                 <div class="form-group">
@@ -42,29 +53,26 @@
                     <button class="bg-cadet-blue">Hitung BMI</button>
                     <button class="bg-black">Reset</button>
                 </div>
+
             </form>
-            <hr>
-            <section>
-                <section class="result-section">
-                    <header>
-                        <h2>Hasil</h2>
-                    </header>
-    
-                    <div>
-                        <span id="result-bmi">0</span>
-                    </div>
-                </section>
          </section>
 
             <!-- Feature Information -->
         <section>
             <section>
+                <header>
+                    <h2>Hasil</h2>
+                </header>
+
+                <div style="text-align: center; font-size: xx-large;">
+                    <span id="result-bmi">0</span>
+                </div>
+            </section>      
                 <article>
-                    <header class="header">
-                        <h2>Feature Information</h2>
-                        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-                            <h2 style="color: #2c3e50; text-align: center;">Tips Menjaga Berat Badan Ideal</h2>
-                            <ul style="line-height: 1.8; font-size: 16px; color: #34495e;">
+                    <h2 style="text-align: center;">Feature Information</h2>
+                    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); background-color: aliceblue;">
+                        <h2 style="color: #2c3e50; text-align: center;">Tips Menjaga Berat Badan Ideal</h2>
+                        <ul style="line-height: 1.8; font-size: 16px; color: #34495e;">
                               <li>
                                 <strong>Makan Seimbang:</strong> Konsumsi makanan bergizi dengan porsi yang sesuai.
                               </li>
@@ -85,10 +93,9 @@
                 <p>Jangan hanya bermimpi tubuh ideal, mulai hari ini jadikan gaya hidup sehat sebagai kebiasaanmu.</p>
                 </article>
             </section>
-        </section>
     </main>
 
-    <footer style="text-align: center;">
+    <footer>
         <span>Made by Dimasprast</span>
     </footer>
 </body>
