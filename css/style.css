@@ -15,7 +15,7 @@ header {
     padding: 19px;
     background: linear-gradient(90deg, #00c6ff, #0072ff);
     color: white;
-    border: 3px;
+    border: 9px;
     border-radius: 8px;
 
 }
@@ -38,10 +38,10 @@ form {
 
 .form-group {
     margin-bottom: 20px;
-    display: flex;
-    
+    display: flex; 
+    border-width: 10px;
+    flex-wrap: wrap;
 }
-
 label {
     display: block;
     font-size: 16px;
@@ -55,6 +55,20 @@ input[type="number"] {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+}
+
+.information {
+    style="text-align: center;"
+}
+
+.div.information {
+    font-family: Arial, sans-serif; 
+    max-width: 600px; margin: auto; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background-color: aliceblue;
 }
 
 /* Gender Radio Buttons with Images */

@@ -1,56 +1,39 @@
-// Ini file js
-
 document.addEventListener("DOMContentLoaded", function () {
-    // Ambil elemen-elemen dari DOM
+    // Ambil elemen yang diperlukan
+    const form = document.querySelector("form");
     const beratBadanInput = document.getElementById("input-berat-badan");
     const tinggiBadanInput = document.getElementById("input-tinggi-badan");
-    const hitungButton = document.querySelector("button.bg-cadet-blue");
-    const resetButton = document.querySelector("button.bg-black");
-    const resultBmi = document.getElementById("result-bmi");
-   
-    // Fungsi untuk menghitung BMI
-    function hitungBMI() {
-        const beratBadan = parseFloat(beratBadanInput.value);
-        const tinggiBadan = parseFloat(tinggiBadanInput.value) / 100; // Konversi cm ke meter
+    const usiaInput = document.getElementById("input-Usia");
+    const genderInputs = document.getElementsByName("gender");
+    const resultBMI = document.getElementById("result-bmi");
+    const resetButton = document.querySelector(".bg-black");
 
-        if (isNaN(beratBadan) || isNaN(tinggiBadan) || tinggiBadan <= 0) {
-            alert("Mohon masukkan berat badan dan tinggi badan anda.");
+    // Fungsi menghitung BMI
+    function hitungBMI() {
+        const berat = parseFloat(beratBadanInput.value);
+        const tinggi = parseFloat(tinggiBadanInput.value) / 100; // Ubah cm ke meter
+
+        if (isNaN(berat) || isNaN(tinggi) || tinggi <= 0 || berat <= 0) {
+            alert("Silakan masukkan berat dan tinggi badan anda.");
             return;
         }
 
-        const bmi = (beratBadan / (tinggiBadan * tinggiBadan)).toFixed(2);
-
-        // Menentukan kategori BMI
-        let kategori = "";
-        if (bmi < 18.5) {
-            kategori = "Kekurangan berat badan";
-        } else if (bmi >= 18.5 && bmi < 24.9) {
-            kategori = "Normal (Sehat)";
-        } else if (bmi >= 25 && bmi < 29.9) {
-            kategori = "Kelebihan berat badan";
-        } else {
-            kategori = "Obesitas";
-        }
-
-        // Tampilkan hasil BMI dan kategori
-        resultBmi.textContent = `${bmi} (${kategori})`;
+        const bmi = (berat / (tinggi * tinggi)).toFixed(2);
+        resultBMI.textContent = bmi;
     }
 
-    // Fungsi untuk mereset form
-    function resetForm() {
-        beratBadanInput.value = "";
-        tinggiBadanInput.value = "";
-        resultBmi.textContent = "0";
-    }
-
-    // Event listener untuk tombol hitung dan reset
-    hitungButton.addEventListener("click", function (event) {
-        event.preventDefault(); // Mencegah reload halaman
+    //Ttombol hitung BMI
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Mencegah halaman reload saat submit
         hitungBMI();
     });
 
+    // Tombol reset
     resetButton.addEventListener("click", function (event) {
-        event.preventDefault(); // Mencegah reload halaman
-        resetForm();
+        event.preventDefault(); // Mencegah reload
+        beratBadanInput.value = "";
+        tinggiBadanInput.value = "";
+        usiaInput.value = "";
+        resultBMI.textContent = "0";
     });
 });

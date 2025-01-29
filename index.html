@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js"></script>
 </head>
 
 <body>
@@ -28,12 +27,12 @@
                     <div class="form-group">
                         <label>Jenis Kelamin</label>
                         <div>
-                            <img src="asset/male.png" alt="Pria" id="male" class="male-img">
+                            <img src="asset/male.png" class="gender-img">
                             <input type="radio" id="gender-male" name="gender" value="male" checked>
                             <label for="gender-male">Pria</label>
                         </div>
                         <div>
-                            <img src="asset/female.png" alt="Wanita" id="female" class="female-img">
+                            <img src="asset/female.png" class="gender-img">
                             <input type="radio" id="gender-female" name="gender" value="female">
                             <label for="gender-female">Wanita</label>
                         </div>
@@ -42,6 +41,11 @@
                 <div class="form-group">
                     <label for="input-berat-badan">Berat Badan (kg)</label>
                     <input type="number" id="input-berat-badan">
+                </div>
+
+                <div class="form-group">
+                    <label for="input-Usia">Usia</label>
+                    <input type="number" id="input-Usia">
                 </div>
 
                 <div class="form-group">
@@ -57,7 +61,7 @@
             </form>
          </section>
 
-            <!-- Feature Information -->
+            <!-- Information -->
         <section>
             <section>
                 <header>
@@ -69,8 +73,8 @@
                 </div>
             </section>      
                 <article>
-                    <h2 style="text-align: center;">Feature Information</h2>
-                    <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); background-color: aliceblue;">
+                    <h2 class="information">Information</h2>
+                    <div class="div-information"></div>
                         <h2 style="color: #2c3e50; text-align: center;">Tips Menjaga Berat Badan Ideal</h2>
                         <ul style="line-height: 1.8; font-size: 16px; color: #34495e;">
                               <li>
@@ -98,6 +102,7 @@
     <footer>
         <span>Made by Dimasprast</span>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
